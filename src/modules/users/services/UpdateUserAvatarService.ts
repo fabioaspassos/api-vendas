@@ -23,9 +23,6 @@ class UpdateUserAvatarService {
       throw new AppError('User not found');
     }
 
-    console.table(user);
-    console.log('avatarFilename:' + avatarFilename);
-
     if (user.avatar) {
       const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
       const userAvatarFileExist = await fs.promises.stat(userAvatarFilePath);
