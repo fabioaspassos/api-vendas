@@ -24,6 +24,9 @@ app.use(
         message: error.message,
       });
     }
+
+    console.log(error);
+
     return response.status(500).json({
       status: 'error',
       message: 'Internal server error',
@@ -32,5 +35,5 @@ app.use(
 );
 
 app.listen(3333, () => {
-  console.log('server started on port 3333! ');
+  console.log('server started on port 3333! 🏆');
 });
